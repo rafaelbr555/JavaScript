@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Condições</title>
+</head>
+<body>
+    <label for="anos">Quanto anos vc tem?</label> <br>
+    <input type="text" name="iidade" id="iidade">
+    <input type="submit" value="enviar" onclick="enviar()">
+    <div id="res"></div>
+    <script>
+        function enviar(){
+            var res = window.document.getElementById('res')
+            var idade = window.document.getElementById('iidade')
+            var a = Number(idade.value)
+            if( a >= 18){
+                res.innerHTML = `Você tem ${a} anos! Vc é maior de idade!`
+            }else{
+                res.innerHTML = `Você tem <strong>${a}</strong> anos! Vc é menor de idade!`
+            }
+
+        }
+    </script>
+</body>
+</html>

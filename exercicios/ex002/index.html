@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para analisar se vc é estrangeiro</title>
+</head>
+<body>
+    <p>Em que pais você nasceu?</p>
+    <input type="text" name="ipais" id="ipais">
+    <input type="button" value="enviar" onclick="enviar()">
+    <div id="res"></div>
+    
+    <script>
+        function enviar(){
+            var a = window.document.querySelector('input#ipais')
+            var res = window.document.getElementById('res')
+            var b = String(a.value)
+
+            if(b== 'Brasil'){
+                res.innerHTML = 'Você é Brasileiro'
+            }else{
+                res.innerHTML = ' Você é Estrangeiro'
+            }
+        }
+
+    </script>
+</body>
+</html>
