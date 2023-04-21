@@ -13,7 +13,7 @@ function imc(){
         var classificacao 
         if(resImc < 18.5){
             
-            classificacao = 'Abaixo do pesso normal'
+            classificacao = 'Abaixo do peso normal'
 
         }else if(resImc > 18.5 && resImc < 24.9){
 
