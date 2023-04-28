@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#onoff{
+    width: 80px;
+    margin-left: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    background-color: black;
+    color: rgb(211, 211, 39);
+    box-shadow: black 2px 2px 2px;
+}
+#onoff:hover{
+    font-size: 1rem;
+    transition: 0.5s;
+}
