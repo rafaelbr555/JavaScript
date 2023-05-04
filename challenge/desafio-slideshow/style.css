@@ -25,18 +25,25 @@ section{
     position:absolute;
     width: 50vw;
     height: 50vh;
-    background-color: red;
+    border-radius: 10px;
     display: flex;
+    overflow: hidden;
+    
     
 }
 .item{
     width: 50vw;
     height: 50vh;
+    transition: all 1s;
 
+}
+.item:first-child{
+    margin-left: -100%;
 }
 .item img {
     width: 50vw;
     height: 50vh;
+    border-radius: 10px;
     
 }
 .next{
@@ -46,9 +53,15 @@ section{
     font-size: 30px;
     padding: 10px;
     font-weight: 600;
+    color: rgba(0, 0, 0, 0);
+    user-select: none;
     z-index: 1;
 }
 .next:hover{
     height: 50vh;
-    background-color: rgba(0, 0, 0, 0.315);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.342);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
 }
