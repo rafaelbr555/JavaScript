@@ -69,7 +69,12 @@ nav ul li {
 #contanier-detalhes, #contanier-todo-list{
     width: 542px;
     height: 594px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 24px;
+    gap: 24px;
     border: 1px solid #27272A;
     border-radius: 12px;
     
@@ -77,17 +82,167 @@ nav ul li {
 .contanier-detalhes-top{
     width: 494px;
     height: 210px;
-    gap: 24px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 24px;
+
 }
 .contanier-detalhes-top-header{
     width: 494px;
     height: 52px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+
 }
 .contanier-detalhes-top-header h1{
     color: #A1A1AA;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+}
+.contanier-detalhes-top-header p {
+    color: #71717A;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+.contanier-detalhes-top-header-icon{
+    width: 40px;
+    height: 40px;
+    background-color: #27272A;
+    border-radius: 4px;
+    padding: 8px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+i{
+    width: 24px;
+    height: 24px;
+    color: #000000;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+
+}
+hr{
+    width: 494px;
+    height: 0px;
+    border: 1px solid #27272A;
+
+}
+.frame1, .frame2{
+
+    width: 494px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+.frame1-text .frame2-text{
+    width: 173px;
+    height: 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+}
+.frame1 .frame1-text h2, .frame2 .frame2-text h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #A1A1AA;
+
+    
+}
+.frame1 .frame1-text p, .frame2 .frame2-text p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #71717A;
+}
+.frame1-modebadge{
+    width: 73px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 8px;
+    background-color: rgba(132, 204, 22, 0.1);
+    border: 1px solid #84CC16;
+    border-radius: 4px;
+}
+#frame1-modebadge{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #84CC16;
+    cursor: pointer;
+    gap: 8px;
+}
+.frame2-modebadge{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 8px;
+    width: 127px;
+    height: 25px;
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid #06B6D4;
+    border-radius: 4px;
+
+}
+#frame2-modebadge{
+    font-style: normal;
+    font-family: 600;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #06B6D4;
+    cursor: pointer;
+    gap:8px;
+}
+.contanier-detalhes-bottom{
+    width: 494px;
+    height: 272px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background-color: red;
+}
+#time{
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
+    background-color: blue;
 }
