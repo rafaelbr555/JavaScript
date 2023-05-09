@@ -75,7 +75,19 @@ nav ul li {
     
 }
 .contanier-detalhes-top{
+    width: 494px;
+    height: 210px;
+    gap: 24px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.contanier-detalhes-top-header{
+    width: 494px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+}
+.contanier-detalhes-top-header h1{
+    color: #A1A1AA;
 }
