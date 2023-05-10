@@ -9,10 +9,17 @@
 }
 
 body{
-    width: 100vw;
-    height: 100vh;
-    padding: 17px 160px;
-    background-color: #18181B;
+   width:1350px ;
+   height: 800px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   padding:  17px 120px;
+   gap: 48px;
+   background-color: #18181B;
+
+
 }
 
 header{
@@ -151,6 +158,16 @@ hr{
     border: 1px solid #27272A;
 
 }
+.subtitulo{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    color: #A1A1AA;
+}
 .frame1, .frame2{
 
     width: 494px;
@@ -170,7 +187,7 @@ hr{
     gap: 4px;
 
 }
-.frame1 .frame1-text h2, .frame2 .frame2-text h2{
+.frame1 .frame1-text h3, .frame2 .frame2-text h3{
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -261,13 +278,83 @@ hr{
     height: 382px;
     background-color: red;
 }
-.input{
-    background-color: red;
+.contanier-input{
     width: 494px;
     height: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 12px;
-    
+
+}
+input{
+    color: #52525B;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+
+}
+#tarefa{
+    width: 393px;
+    height: 40px;
+    background-color: #27272A;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    border-style: none;
+
+}
+button{
+    width: 89px;
+    height: 40px;
+    padding: 8px 12px;
+    gap: 8px;
+    color: #fafafa;
+    background-color: #84CC16;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.dark{
+    background-color: white;
+    color: black;
+}
+.dark li {
+   background-color:#F4F4F5;
+}
+.dark h1{
+    color: #27272A;
+}
+.dark .frame1 .frame1-text h3, .dark .frame2 .frame2-text h3{
+
+    color: #71717A;
+}
+.dark .frame1 .frame1-text p, .dark .frame2 .frame2-text p{
+    color: #A1A1AA;
+}
+
+.dark header div p, .dark .contanier-detalhes-top-header div p {
+    color:#71717A;
+}
+
+.dark .subtitulo{
+    color: #52525B;
+
+}
+
+.dark .contanier-detalhes-top-header-icon, .dark .contanier-todo-list-top-header-icon{
+    background-color: #F4F4F5;
 }
