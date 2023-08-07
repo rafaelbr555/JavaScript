@@ -358,3 +358,8 @@ button{
 .dark .contanier-detalhes-top-header-icon, .dark .contanier-todo-list-top-header-icon{
     background-color: #F4F4F5;
 }
+.dark #tarefa{
+    
+    color: #A1A1AA;
+    background: #F4F4F5;
+}

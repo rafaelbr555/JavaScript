@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+:root {
+  --active-input: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --input-errors: hsl(0, 100%, 66%);
+
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+
+  height: 100vh;
+  background-image: url(images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding: 3.3rem 1.7rem;
+}
+
+.card-back {
+  max-width: 28rem;
+  position: relative;
+  margin: 0 0 0 auto;
+}
+.card-back img {
+  width: 100%;
+}
+
+.text-cvc {
+  position: absolute;
+  top: 0%;
+  width: 280px;
+  height: 153px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 4rem;
+  color: var(--White);
+}
+
+.card-front {
+  max-width: 28rem;
+  position: absolute;
+  top: 12rem;
+}
+.card-front img {
+  width: 100%;
+}
+.logo {
+  width: 28rem;
+  position: absolute;
+  top: 0;
+  padding: 2rem 0rem 0rem 2rem;
+}
+.logo img {
+  width: 20%;
+}
+
+.number {
+  position: absolute;
+  top: 86px;
+
+  padding: 0rem 2rem;
+  color: var(--White);
+  letter-spacing: 2px;
+}
+.dados {
+  width: 100%;
+  position: absolute;
+  top: 120px;
+
+  padding: 0rem 2rem;
+  font-size: 1.2rem;
+  color: var(--White);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  width: 375px;
+}
+
+label {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+#input-name,
+#input-number {
+  width: 100%;
+  max-width: 341px;
+  padding: 1.4rem;
+  margin-bottom: 20px;
+
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 5px;
+}
+
+.input-dados {
+  width: 100%;
+  max-width: 341px;
+  display: flex;
+}
+
+.input-mother-year {
+  display: flex;
+}
+
+#input-mother,
+#input-year {
+  width: 70px;
+  padding: 1.4rem;
+
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 5px;
+}
+
+#input-cvc {
+  width: 165px;
+  padding: 1.4rem;
+
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 5px;
+}
+
+.btn-confirm{
+    width:100% ;
+    max-width: 341px;
+    padding: 1.8rem;
+    margin-top: 25px;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
