@@ -115,8 +115,6 @@ label {
   width: 100%;
   max-width: 341px;
   padding: 1.4rem;
-  margin-bottom: 20px;
-
   border: 1px solid var(--Light-grayish-violet);
   border-radius: 5px;
 }
@@ -159,8 +157,15 @@ label {
   border-radius: 5px;
   cursor: pointer;
 }
+.error {
+  border: 2px solid var(--input-errors);
+}
+.error_mensagem::after {
+  content: "Can' t be blank";
+  color: red;
+}
 
-@media screen and (min-width: 414px) and (max-width:1440px){
+@media screen and (min-width: 414px) and (max-width: 1440px) {
   body {
     height: 100vh;
     background-image: url(images/bg-main-desktop.png);
@@ -176,7 +181,7 @@ label {
     align-items: center;
   }
 
-  form{
+  form {
     width: 382px;
   }
 
@@ -235,12 +240,12 @@ label {
     width: 100%;
     max-width: 382px;
     padding: 1.4rem;
-    margin: 5px 0px 20px 0px;
+ 
   }
   #input-mother,
   #input-year {
     width: 80px;
-    margin: 5px 0px 20px 0px;
+    
   }
   .input-dados {
     max-width: 382px;
@@ -248,10 +253,12 @@ label {
 
   #input-cvc {
     width: 180px;
-    margin: 5px 0px 20px 0px;
+   
   }
   .btn-confirm {
     width: 100%;
     max-width: 382px;
   }
+
+
 }
