@@ -15,9 +15,8 @@
 }
 html {
   font-size: 62.5%;
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
-
 
 body {
   font-family: "Space Grotesk", sans-serif;
@@ -28,21 +27,23 @@ body {
   background-image: url(images/bg-main-mobile.png);
   background-repeat: no-repeat;
   background-size: contain;
-
 }
-
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 120px;
   padding: 3.3rem 1.7rem;
+}
+
+.cards {
+  max-width: 375px;
+  height: 280px;
 }
 
 .card-back {
   max-width: 28rem;
-  position: relative;
-  margin: 0 0 0 auto;
+  position: absolute;
+  margin: 0 0 0 45px;
 }
 .card-back img {
   width: 100%;
@@ -56,8 +57,9 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 4rem;
+  padding-right: 3.3rem;
   color: var(--White);
+  font-size: 1.4rem;
 }
 
 .card-front {
@@ -146,14 +148,110 @@ label {
   border-radius: 5px;
 }
 
-.btn-confirm{
-    width:100% ;
-    max-width: 341px;
-    padding: 1.8rem;
-    margin-top: 25px;
-    background-color: var(--Very-dark-violet);
-    color: var(--White);
-    border-style: none;
-    border-radius: 5px;
-    cursor: pointer;
+.btn-confirm {
+  width: 100%;
+  max-width: 341px;
+  padding: 1.8rem;
+  margin-top: 25px;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  border-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 414px) and (max-width:1440px){
+  body {
+    height: 100vh;
+    background-image: url(images/bg-main-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  form{
+    width: 382px;
+  }
+
+  .card-back,
+  .card-front {
+    max-width: 450px;
+    height: 245px;
+  }
+
+  .cards {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .card-front {
+    position: absolute;
+    top: 60px;
+    left: 90px;
+  }
+
+  .card-back {
+    position: absolute;
+    top: 340px;
+  }
+
+  .text-cvc {
+    width: 100%;
+    height: 100%;
+    padding-right: 60px;
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    width: 100%;
+    padding: 30px 30px 0px 30px;
+  }
+
+  .number {
+    margin-top: 40px;
+    font-size: 3.1rem;
+    padding: 0px 30px;
+  }
+  .dados {
+    margin-top: 80px;
+    font-size: 1.8rem;
+    padding: 0px 30px;
+  }
+  label {
+    font-size: 1.4rem;
+  }
+  #input-name,
+  #input-number {
+    width: 100%;
+    max-width: 382px;
+    padding: 1.4rem;
+    margin: 5px 0px 20px 0px;
+  }
+  #input-mother,
+  #input-year {
+    width: 80px;
+    margin: 5px 0px 20px 0px;
+  }
+  .input-dados {
+    max-width: 382px;
+  }
+
+  #input-cvc {
+    width: 180px;
+    margin: 5px 0px 20px 0px;
+  }
+  .btn-confirm {
+    width: 100%;
+    max-width: 382px;
+  }
 }
