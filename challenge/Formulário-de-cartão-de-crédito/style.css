@@ -108,6 +108,9 @@ form {
 label {
   font-size: 1.4rem;
   letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  margin: px 0px px 0px;
 }
 
 #input-name,
@@ -123,6 +126,8 @@ label {
   width: 100%;
   max-width: 341px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .input-mother-year {
@@ -157,15 +162,37 @@ label {
   border-radius: 5px;
   cursor: pointer;
 }
-.error {
-  border: 2px solid var(--input-errors);
-}
-.error_mensagem::after {
-  content: "Can' t be blank";
-  color: red;
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 5px 0px;
 }
 
-@media screen and (min-width: 414px) and (max-width: 1440px) {
+.incomplete {
+  border: 5px solid var(--input-errors);
+}
+.error_incomplete::after{
+  display: flex;
+  flex-direction: column;
+  content: "Incomplete";
+  color: red;
+  font-size: 1.4rem;
+  margin-top: 3px;
+}
+.error {
+  border: 5px solid var(--input-errors);
+}
+.error_mensagem::after {
+  display: flex;
+  flex-direction: column;
+  content: "Can' t be blank";
+  color: red;
+  font-size: 1.4rem;
+  margin-top: 3px;
+}
+
+@media screen and (min-width: 376px) and (max-width: 1440px) {
   body {
     height: 100vh;
     background-image: url(images/bg-main-desktop.png);
@@ -240,12 +267,10 @@ label {
     width: 100%;
     max-width: 382px;
     padding: 1.4rem;
- 
   }
   #input-mother,
   #input-year {
     width: 80px;
-    
   }
   .input-dados {
     max-width: 382px;
@@ -253,12 +278,15 @@ label {
 
   #input-cvc {
     width: 180px;
-   
   }
   .btn-confirm {
     width: 100%;
     max-width: 382px;
   }
 
-
+  label {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 5px 0px;
+  }
 }
