@@ -169,10 +169,16 @@ label {
   margin: 20px 0px 5px 0px;
 }
 
-.incomplete {
-  border: 5px solid var(--input-errors);
+.errorValue-invalid::after {
+  display: flex;
+  flex-direction: column;
+  content: "invalid month";
+  color: red;
+  font-size: 1.4rem;
+  margin-top: 3px;
 }
-.error_incomplete::after{
+
+.error_incomplete::after {
   display: flex;
   flex-direction: column;
   content: "Incomplete";
@@ -190,6 +196,42 @@ label {
   color: red;
   font-size: 1.4rem;
   margin-top: 3px;
+}
+.thank-you {
+  display: none;
+}
+.thanks-img {
+    text-align: center;
+  }
+  .thanks-img img {
+    margin-bottom: 20px;
+  }
+  .thanks-h1 {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .thanks-p {
+    margin-bottom: 20px;
+    color: var(--Dark-grayish-violet);
+  }
+  .thanks-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-continue {
+    width: 315px;
+    padding: 1.8rem;
+    margin-top: 25px;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.on {
+  display: block;
 }
 
 @media screen and (min-width: 376px) and (max-width: 1440px) {
@@ -288,5 +330,36 @@ label {
     display: flex;
     flex-direction: column;
     margin: 20px 0px 5px 0px;
+  }
+  .thank-you {
+    display: none;
+  }
+  .thanks-img {
+    text-align: center;
+  }
+  .thanks-img img {
+    margin-bottom: 20px;
+  }
+  .thanks-h1 {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .thanks-p {
+    margin-bottom: 20px;
+    color: var(--Dark-grayish-violet);
+  }
+  .button-continue {
+    width: 382px;
+    padding: 1.8rem;
+    margin-top: 25px;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .on {
+    display: block;
   }
 }

@@ -15,12 +15,13 @@ let inputCvc = document.getElementById("input-cvc");
 
 let btnConfirm = document.querySelector(".btn-confirm");
 
+
 function substituirName(e) {
   textName.innerText = e.target.value.toUpperCase();
 }
 
 function substituirNumber(e) {
-  textNumber.innerText = e.target.value;
+  textNumber.innerText = formatar(e.target.value);
 }
 
 function substituirMes(e) {
@@ -33,9 +34,28 @@ function substituirAno(e) {
 function substituirCvc(e) {
   textCvc.innerText = e.target.value;
 }
+function formatar(e) {
+  return e.toString().replace(/\d{4}(?=.)/g, "$& ");
+}
 
-function verificarError(e) {
+function enviar(e){
   e.preventDefault();  
+  verificarError()
+
+  const camposComErro = document.querySelectorAll('.error')
+  let form = document.getElementById("form");
+  let thanks = document.querySelector('.thank-you')
+  if(camposComErro.length === 0){
+    form.remove()
+    thanks.classList.add('on')
+  
+  }else{
+    console.log('tem error')
+  }
+}
+
+function verificarError() {
+  // Validando o input Name se está vazio
   if (!inputName.value) {
     inputName.classList.add("error");
     inputName.parentElement.classList.add("error_mensagem");
@@ -43,6 +63,7 @@ function verificarError(e) {
     inputName.classList.remove("error");
     inputName.parentElement.classList.remove("error_mensagem");
   }
+  // Validando o input Number se está vazio
   if(!inputNumber.value){
     inputNumber.classList.add('error')
     inputNumber.parentElement.classList.add('error_mensagem')
@@ -50,13 +71,15 @@ function verificarError(e) {
     inputNumber.classList.remove('error_mensagem')
     inputNumber.parentElement.classList.remove('error_mensagem')
   }
+  // Validando se o input Number está com todos os 16 digitos 
   if (inputNumber.value.length >=1 && inputNumber.value.length < 16) {
-    inputNumber.classList.add('incomplete')
+    inputNumber.classList.add('error')
     inputNumber.parentElement.classList.add("error_incomplete");
   } else {
-    inputNumber.classList.remove('incomplete')
+    inputNumber.classList.remove('error')
     inputNumber.parentElement.classList.remove("error_incomplete");
   }
+  // Validando se o input mês e ano estão vazios
   if (!inputMes.value || !inputAno.value) {
     inputAno.classList.add("error");
     inputMes.classList.add("error");
@@ -66,12 +89,29 @@ function verificarError(e) {
     inputMes.classList.remove("error");
     inputMes.parentElement.classList.remove("error_mensagem");
   }
+  // Validando se o input Mês está recebendo um mês invalido
+  if(inputMes.value == 0 || inputMes.value > 12){
+    inputMes.classList.add('error')
+    inputMes.parentElement.classList.add("errorValue-invalid");
+  }else{
+    inputMes.classList.remove('error')
+    inputMes.parentElement.classList.remove("errorValue-invalid");
+  }
+  //validando se o input Cvc está vazio
   if (!inputCvc.value) {
     inputCvc.classList.add("error");
     inputCvc.parentElement.classList.add("error_mensagem");
   } else {
     inputCvc.classList.remove("error");
     inputCvc.parentElement.classList.remove("error_mensagem");
+  }
+  //validando se o input cvc está completo
+  if(inputCvc.value.length < 3){
+    inputCvc.classList.add('error')
+    inputCvc.parentElement.classList.add('error_incomplete')
+  }else{
+    inputCvc.classList.remove('error')
+    inputCvc.parentElement.classList.remove('error_incomplete')
   }
 }
 
@@ -80,4 +120,4 @@ inputNumber.addEventListener("keyup", substituirNumber);
 inputMes.addEventListener("keyup", substituirMes);
 inputAno.addEventListener("keyup", substituirAno);
 inputCvc.addEventListener("keyup", substituirCvc);
-btnConfirm.addEventListener("click", verificarError);
+btnConfirm.addEventListener("click", enviar);
