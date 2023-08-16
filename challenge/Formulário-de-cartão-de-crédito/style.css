@@ -234,7 +234,7 @@ label {
   display: block;
 }
 
-@media screen and (min-width: 376px) and (max-width: 1440px) {
+@media screen and (min-width: 415px) and (max-width: 1440px) {
   body {
     height: 100vh;
     background-image: url(images/bg-main-desktop.png);
